@@ -1,12 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import "@/styles/globals.css";
+import { Button } from "../components/ui/button";
 // import Card from "../components/Card.astro";
 ---
 
 <Layout title="Hayat Tamboli">
   <main class="bg-slate-100 h-screen flex justify-center items-center">
-    <div class="w-3/4 h-3/4 border-slate-200 border-4 rounded-3xl border-dashed flex justify-center items-center">
+    <div
+      class="w-3/4 h-3/4 border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+    >
       <h1 class="text-2xl font-bold text-slate-600">Updates coming soon...</h1>
+      <a href="https://read.cv/hayat"><Button>read.cv for older work</Button></a
+      >
     </div>
   </main>
 </Layout>
