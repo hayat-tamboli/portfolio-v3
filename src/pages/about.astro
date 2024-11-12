@@ -1,9 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
 ---
 
 <Layout title="Hayat Tamboli">
-  <main class="bg-slate-100 h-screen flex justify-center items-center">
-    /about page
+  <main
+    class="bg-slate-100 h-screen flex justify-center items-center px-4 md:px-16 lg:px-32"
+  >
+    <!-- <Image src={} alt="Hayat's photo"/> -->
+    <div>
+      <p class="text-xl text-slate-950/90">
+        Hi, I am Hayat Tamboli, an Interaction Designer with a knack for
+        exploring new technologies. Currently pursuing Master's of Design at <a
+          href="https://www.idc.iitb.ac.in/"
+          class="font-bold hover:decoration-black hover:decoration-wavy hover:underline duration-250 transition-all"
+        >
+          IDC, IIT Bombay</a
+        >.
+      </p>
+      <p class="text-xl text-slate-950/90 mt-4">
+        When not designing or coding, you will find me tinkering with
+        electronics, playing NFS and watching Formula 1.
+      </p>
+    </div>
   </main>
 </Layout>
+
+<style></style>
