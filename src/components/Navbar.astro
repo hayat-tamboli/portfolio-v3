@@ -18,8 +18,9 @@ const isWorkUpdatesActive = pathname === "/work-updates";
     <li class="text-sm">
       <a
         class:list={{
-          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 text-black/50 hover:text-slate-800": true,
+          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150  hover:text-slate-800": true,
           "text-black/100": isHomeActive,
+          "text-black/50": !isHomeActive,
         }}
         href="/">Hayat Tamboli</a
       >
@@ -27,8 +28,9 @@ const isWorkUpdatesActive = pathname === "/work-updates";
     <li class="text-sm">
       <a
         class:list={{
-          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 text-black/50 hover:text-slate-800": true,
+          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 hover:text-slate-800": true,
           "text-black/100": isLabActive,
+          "text-black/50": !isLabActive,
         }}
         href="/lab">Lab</a
       >
@@ -36,8 +38,9 @@ const isWorkUpdatesActive = pathname === "/work-updates";
     <li class="text-sm">
       <a
         class:list={{
-          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 text-black/50 hover:text-slate-800": true,
+          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 hover:text-slate-800": true,
           "text-black/100": isAboutActive,
+          "text-black/50": !isAboutActive,
         }}
         href="/about">About</a
       >
@@ -45,8 +48,9 @@ const isWorkUpdatesActive = pathname === "/work-updates";
     <li class="text-sm">
       <a
         class:list={{
-          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 text-black/50 hover:text-slate-800": true,
+          "w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 hover:text-slate-800": true,
           "text-black/100": isWorkUpdatesActive,
+          "text-black/50": !isWorkUpdatesActive,
         }}
         href="/work-updates">Updates</a
       >
