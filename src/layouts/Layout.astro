@@ -24,7 +24,7 @@ const { title } = Astro.props;
   <header>
     <Navbar />
   </header>
-  <body>
+  <body class="bg-slate-100">
     <slot />
     <footer class="bg-slate-200 flex justify-center py-8 px-4">
       <ul class="flex text-slate-500 flex-wrap gap-8">
@@ -35,7 +35,10 @@ const { title } = Astro.props;
           <a href="https://www.linkedin.com/in/hayat-tamboli">Linkedin</a>
         </li>
         <li class="hover:text-slate-800">
-          <a href="https://www.instagram.com/hayattamboli">Instagram</a>
+          <a href="https://twitter.com/HayatTamboli">Twitter</a>
+        </li>
+        <li class="hover:text-slate-800">
+          <a href="https://read.cv/hayat">Read CV</a>
         </li>
         <li class="hover:text-slate-800">
           <a href="https://github.com/hayat-tamboli">GitHub</a>
@@ -43,6 +46,5 @@ const { title } = Astro.props;
       </ul>
     </footer>
   </body>
-
 
 </html>

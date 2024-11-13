@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import { Button } from "./ui/button";
 type Props = HTMLAttributes<"a">;
 const { href, class: className, ...props } = Astro.props;
 const { pathname } = Astro.url;
@@ -61,6 +62,11 @@ const isWorkUpdatesActive = pathname === "/work-updates";
         class="w-fit flex justify-center py-3 px-4 rounded-lg hover:bg-slate-100 font-semibold transition-all duration-150 text-black/50 hover:text-slate-800"
         href="https://drive.google.com/file/d/1x_uM27oRfGrswvB2EFfuGhJanDQAsa78/view?usp=drive_link"
         target="_blank">Resume</a
+      >
+    </li>
+    <li class:list={{"hidden": !isWorkUpdatesActive,}}>
+      <a href="https://read.cv/hayat"
+        ><Button>visit read.cv for older work</Button></a
       >
     </li>
   </ul>
