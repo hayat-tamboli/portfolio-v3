@@ -12,7 +12,10 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Hayat's Personal Portfolio and soon his digital garden 🪴"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
@@ -23,6 +26,23 @@ const { title } = Astro.props;
   </header>
   <body>
     <slot />
+    <footer class="bg-slate-200 flex justify-center py-8 px-4">
+      <ul class="flex text-slate-500 flex-wrap gap-8">
+        <li class="hover:text-slate-800">
+          <a href="mailto:hayat.tamboli@gmail.com">Email</a>
+        </li>
+        <li class="hover:text-slate-800">
+          <a href="https://www.linkedin.com/in/hayat-tamboli">Linkedin</a>
+        </li>
+        <li class="hover:text-slate-800">
+          <a href="https://www.instagram.com/hayattamboli">Instagram</a>
+        </li>
+        <li class="hover:text-slate-800">
+          <a href="https://github.com/hayat-tamboli">GitHub</a>
+        </li>
+      </ul>
+    </footer>
   </body>
+
 
 </html>
