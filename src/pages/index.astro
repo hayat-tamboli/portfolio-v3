@@ -1,26 +1,84 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "@/styles/globals.css";
-import { Button } from "../components/ui/button";
-import Navbar from "@/components/Navbar.astro";
-// import Card from "../components/Card.astro";
+import { Image } from "astro:assets";
+import bollyBlues from "@/Images/bollyblues_redesign.png";
 ---
 
 <Layout title="Hayat Tamboli">
-  <main class="bg-slate-100 h-screen flex justify-center items-center">
+  <main class="bg-slate-100 flex justify-center items-center">
     <div
-      class="w-2/4 h-3/4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center"
+      class="md:w-2/4 px-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center my-40"
     >
       <div class="bg-slate-400/10 p-8 rounded-3xl border-2 border-slate-200/20">
         <h1 class="text-2xl font-medium text-black/80">
           Hi, I'm <span class="text-slate-900">Hayat</span>
         </h1>
-        <h1 class="text-2xl font-medium text-black/80">
-          I find joy in designing and building beautiful & functional softwares
+        <h1 class="text-xl font-medium text-black/80">
+          I find joy in <span class="hover:decoration-black hover:decoration-wavy hover:underline transition-all duration-500">designing</span> and <span class="hover:decoration-black hover:decoration-wavy hover:underline transition-all duration-500">building</span> beautiful & functional software
         </h1>
+      </div>
+      <div
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
+      >
+        <a href="https://data-vis-ten.vercel.app/"
+          ><div class="relative">
+            <Image src={bollyBlues} alt="" />
+            <div
+              class="absolute py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+            >
+              Redesign of Bolly Blues: <p class="text-sm">
+                Bollywood Data Visualization
+              </p>
+            </div>
+          </div></a
+        >
+      </div>
+      <div
+        class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+      >
+        <h1 class="text-2xl font-bold text-slate-400 my-24">More projects will be added soon</h1>
       </div>
     </div>
   </main>
+  <div id="cursor" class="cursor"></div>
+  <script is:inline>
+    // Find all buttons with the `alert` class on the page.
+    var cursor = document.getElementById("cursor");
+    const image = document.querySelector("img");
+    document.addEventListener("mousemove", moveCursor);
+    function moveCursor(e) {
+      let x = e.clientX;
+      let y = e.clientY;
+      cursor.style.left = `${x}px`;
+      cursor.style.top = `${y}px`;
+    }
+    image.addEventListener("mousemove", function () {
+      cursor.classList.add("hover-cursor");
+    });
+    image.addEventListener("mouseleave", function () {
+      cursor.classList.remove("hover-cursor");
+    });
+  </script>
 </Layout>
 
-<!-- <style></style> -->
+<style lang="scss">
+  .cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.3s,
+      height 0.3s;
+    pointer-events: none;
+  }
+  .hover-cursor {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.276);
+    transition: width 0.5s height 0.5s;
+  }
+</style>
