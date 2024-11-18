@@ -1,13 +1,98 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import fabricOfTime from "@/Images/fabricOfTime.png";
+import aironicalsThumbnail from "@/Images/aironicalsThumbnail.png";
 ---
 
 <Layout title="Hayat Tamboli - experiments">
-  <main class="bg-slate-100 h-screen flex justify-center items-center">
+  <main class="bg-slate-100 min-h-screen flex justify-center items-center">
     <div
-      class="w-3/4 h-3/4 border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+      class="md:w-2/4 px-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center my-40"
     >
-      <h1 class="text-2xl font-bold text-slate-600">My experiments and explorations will show up here soon!</h1>
+      <div
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
+      >
+        <div>
+          <div>
+            <div
+              onclick={"document.getElementById('aironicalsVideo').classList.remove('hidden');document.getElementById('aironicalsThumbnail').classList.add('hidden')"}
+              class="cursor-pointer"
+            >
+              <Image
+                src={aironicalsThumbnail}
+                alt={""}
+                class="aspect-video object-cover object-top"
+                id="aironicalsThumbnail"
+              />
+              <iframe
+                class="aspect-video hidden"
+                id="aironicalsVideo"
+                width="100%"
+                src="https://www.youtube.com/embed/amwDWt0vpjs?si=oh4VPzOr14NFa1hc&rel=0"
+                title="Fabric of Time - Video control using fabric"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+            <div
+              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+            >
+              <p class="font-bold text-slate-900/90">Aironicals:</p>
+              <p class="text-base capitalize">AI Podcast of Hayat and Yash</p>
+              <p class="text-sm opacity-50">
+                Collaborators: <a href="https://www.behance.net/yashkaranjavkar">Yash</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
+      >
+        <div>
+          <div>
+            <div
+              onclick={"document.getElementById('fabricOfTimeVideo').classList.remove('hidden');document.getElementById('fabricOfTimeThumbnail').classList.add('hidden')"}
+              class="cursor-pointer"
+            >
+              <Image
+                src={fabricOfTime}
+                alt={""}
+                class="aspect-video object-cover object-top"
+                id="fabricOfTimeThumbnail"
+              />
+              <iframe
+                class="aspect-video hidden"
+                id="fabricOfTimeVideo"
+                width="100%"
+                src="https://www.youtube.com/embed/pd5-uiqKcpc?si=hiUO7t6dFJl397Pj&rel=0"
+                title="Fabric of Time - Video control using fabric"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+            <div
+              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+            >
+              <p class="font-bold text-slate-900/90">Fabric of Time:</p>
+              <p class="text-base capitalize">Video control using fabric</p>
+              <p class="text-sm opacity-50">
+                Collaborators: <a href="https://nityavyas.com/">Nitya</a>, <a
+                  href="https://www.behance.net/sidharthgoutham">Sidharth</a
+                >, <a href="https://www.behance.net/yashkaranjavkar">Yash</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+      >
+        <h1 class="text-2xl font-bold text-slate-400 my-24 p-10">
+          More experiments and explorations will be added soon
+        </h1>
+      </div>
     </div>
   </main>
 </Layout>
