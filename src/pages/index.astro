@@ -35,8 +35,56 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
         <div>
           <div>
             <div
-              onclick={"document.getElementById('errorVideo').classList.remove('hidden');document.getElementById('errorThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
+              onclick={"document.getElementById('starmazeVideo').classList.remove('hidden');document.getElementById('starmazeThumbnail').classList.add('hidden');document.getElementById('starmazeAward').classList.add('hidden')"}
+              class="cursor-pointer relative"
+            >
+              <Image
+                src={starmazeThumbnail}
+                alt={""}
+                class="aspect-video object-cover object-top"
+                id="starmazeThumbnail"
+              />
+              <iframe
+                class="aspect-video hidden"
+                id="starmazeVideo"
+                width="100%"
+                src="https://www.youtube.com/embed/qIpxdI3iyhA?si=DGuM6hiu5F61C9ul&rel=0"
+                title="Dive: A generative art authoring tool in VR"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+              <div
+                class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
+                id="starmazeAward"
+              >
+                🏆 Best Artwork Installation Award - IndiaHCI 2024
+              </div>
+            </div>
+            <div
+              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+            >
+              <p class="font-bold text-slate-900/90">STARMAZE:</p>
+              <p class="text-base capitalize">A Cross-platform VR Game</p>
+              <p class="text-sm opacity-50">
+                Collaborators: <a
+                  href="https://www.linkedin.com/in/anumeha-patoria-b77ba1160/"
+                  >Anumeha</a
+                >, <a href="https://tanmaykuwalekar.com/">Tanmay</a>, <a
+                  href="https://yashwantrawat.com">Yashwant</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
+      >
+        <div>
+          <div>
+            <div
+              onclick={"document.getElementById('errorVideo').classList.remove('hidden');document.getElementById('errorThumbnail').classList.add('hidden');document.getElementById('errorAward').classList.add('hidden')"}
+              class="cursor-pointer relative"
             >
               <Image
                 src={errorThumbnail}
@@ -53,6 +101,12 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen></iframe>
+              <div
+                class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
+                id="errorAward"
+              >
+                🏆 Most Polished Gameplay Award - CHI PLAY 2024
+              </div>
             </div>
             <div
               class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
@@ -92,48 +146,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
           </div></a
         >
       </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('starmazeVideo').classList.remove('hidden');document.getElementById('starmazeThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
-            >
-              <Image
-                src={starmazeThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="starmazeThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="starmazeVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/qIpxdI3iyhA?si=DGuM6hiu5F61C9ul&rel=0"
-                title="Dive: A generative art authoring tool in VR"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
-            >
-              <p class="font-bold text-slate-900/90">STARMAZE:</p>
-              <p class="text-base capitalize">A Cross-platform VR Game</p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://www.linkedin.com/in/anumeha-patoria-b77ba1160/"
-                  >Anumeha</a
-                >, <a href="https://tanmaykuwalekar.com/">Tanmay</a>, <a
-                  href="https://yashwantrawat.com">Yashwant</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div
         class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20"
       >
