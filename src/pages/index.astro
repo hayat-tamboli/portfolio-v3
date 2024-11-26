@@ -6,31 +6,37 @@ import bollyBlues from "@/Images/bollyblues_redesign.png";
 import diveThumbnail from "@/Images/diveThumbnail.png";
 import starmazeThumbnail from "@/Images/starmazeThumbnail.png";
 import errorThumbnail from "@/Images/errorThumbnail.png";
+import { Button } from "@/components/ui/button";
 ---
 
 <Layout title="Hayat Tamboli">
   <main class="bg-slate-100 flex justify-center items-center">
     <div
-      class="md:w-2/4 px-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center my-40"
+      class="md:w-2/4 px-4 rounded-2xl border-dashed flex flex-col space-y-4 justify-center my-40"
     >
-      <div class="bg-slate-400/10 p-8 rounded-3xl border-2 border-slate-200/20">
-        <h1 class="text-2xl font-medium text-black/80">
-          Hi, I'm <span class="text-slate-900">Hayat</span>
+      <div
+        class="bg-white p-8 rounded-3xl my-10 border border-slate-200/30 shadow-md shadow-slate-400/10"
+      >
+        <h1 class="text-4xl font-bold text-black/80">
+          Hi, I'm <span class="text-slate-900">Hayat!</span>
         </h1>
-        <h1 class="text-xl font-medium text-black/80">
+        <h1 class="text-xl font-medium text-black/80 mt-4">
           I find joy in <span
             class="hover:decoration-black hover:decoration-wavy hover:underline transition-all duration-500"
             >designing</span
           > and <span
             class="hover:decoration-black hover:decoration-wavy hover:underline transition-all duration-500"
             >building</span
-          > beautiful & functional software
+          >
+          <i>beautiful</i> & <i>functional</i> softwares.
         </h1>
       </div>
       <hr class="h-[2px] bg-slate-200 border-0 dark:bg-slate-700" />
-      <h1 class="text-2xl font-bold text-black/80">Selected Projects</h1>
+      <h1 class="text-3xl font-bold text-black/80 pt-6 pb-3">
+        Selected Projects
+      </h1>
       <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20 hover:scale-[0.98] transition-all duration-250"
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
       >
         <div>
           <div>
@@ -61,16 +67,19 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
               </div>
             </div>
             <div
-              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
             >
               <p class="font-bold text-slate-900/90">STARMAZE:</p>
               <p class="text-base capitalize">A Cross-platform VR Game</p>
               <p class="text-sm opacity-50">
                 Collaborators: <a
                   href="https://www.linkedin.com/in/anumeha-patoria-b77ba1160/"
-                  >Anumeha</a
-                >, <a href="https://tanmaykuwalekar.com/">Tanmay</a>, <a
-                  href="https://yashwantrawat.com">Yashwant</a
+                  class="hover:underline">Anumeha</a
+                >, <a
+                  href="https://tanmaykuwalekar.com/"
+                  class="hover:underline">Tanmay</a
+                >, <a href="https://yashwantrawat.com" class="hover:underline"
+                  >Yashwant</a
                 >
               </p>
             </div>
@@ -78,7 +87,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
         </div>
       </div>
       <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20 hover:scale-[0.98] transition-all duration-250"
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
       >
         <div>
           <div>
@@ -109,7 +118,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
               </div>
             </div>
             <div
-              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
             >
               <p class="font-bold text-slate-900/90">Error 409:</p>
               <p class="text-base capitalize">
@@ -117,16 +126,25 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
                 Conversion
               </p>
               <p class="text-sm opacity-50">
-                Collaborators: <a href="">Deekshaa</a>,
-                <a href="">Vijayanand</a>,
-                <a href="https://www.behance.net/yashkaranjavkar">Yash</a>
+                Collaborators: <a href="" class="hover:underline">Deekshaa</a>,
+                <a href="" class="hover:underline">Vijayanand</a>,
+                <a
+                  href="https://www.behance.net/yashkaranjavkar"
+                  class="hover:underline">Yash</a
+                >
               </p>
+              <a href="https://dl.acm.org/doi/10.1145/3665463.3678826"
+                ><Button
+                  className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
+                  >Read the paper 🡥</Button
+                ></a
+              >
             </div>
           </div>
         </div>
       </div>
       <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20 hover:scale-[0.98] transition-all duration-250"
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
       >
         <a href="https://data-vis-ten.vercel.app/"
           ><div>
@@ -136,7 +154,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
               class="aspect-video object-cover object-top"
             />
             <div
-              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl border-t"
             >
               <p class="font-bold text-slate-900/90">
                 Redesign of Bolly Blues:
@@ -148,7 +166,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
       </div>
 
       <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/20 hover:scale-[0.98] transition-all duration-250"
+        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
       >
         <div>
           <div>
@@ -173,7 +191,7 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
                 allowfullscreen></iframe>
             </div>
             <div
-              class="py-4 px-8 bottom-0 left-0 bg-slate-200 w-full font-semibold text-xl"
+              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
             >
               <p class="font-bold text-slate-900/90">Dive:</p>
               <p class="text-base capitalize">
@@ -182,9 +200,12 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
               <p class="text-sm opacity-50">
                 Collaborators: <a
                   href="https://www.linkedin.com/in/anumeha-patoria-b77ba1160/"
-                  >Anumeha</a
-                >, <a href="https://tanmaykuwalekar.com/">Tanmay</a>, <a
-                  href="https://yashwantrawat.com">Yashwant</a
+                  class="hover:underline">Anumeha</a
+                >, <a
+                  href="https://tanmaykuwalekar.com/"
+                  class="hover:underline">Tanmay</a
+                >, <a href="https://yashwantrawat.com" class="hover:underline"
+                  >Yashwant</a
                 >
               </p>
             </div>
