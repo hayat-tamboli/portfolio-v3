@@ -83,6 +83,9 @@
     font-weight: 400;
     font-style: normal;
   }
+  .satoshi {
+    font-family: "Satoshi", sans-serif;
+  }
 }
 
 html {
