@@ -1,0 +1,209 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "@/styles/globals.css";
+import { Image } from "astro:assets";
+import saveo_1 from "@/Images/saveo/saveo_1.png";
+import saveo_2 from "@/Images/saveo/saveo_2.png";
+import saveo_3 from "@/Images/saveo/saveo_3.png";
+import saveo_userinterviewdata from "@/Images/saveo/userinterview_data.png";
+import saveo_insight_1 from "@/Images/saveo/insight_1.png";
+import saveo_insight_2 from "@/Images/saveo/insight_2.png";
+import saveo_insight_3 from "@/Images/saveo/insight_3.png";
+import saveo_persona_1 from "@/Images/saveo/saveo_persona_1.png";
+import saveo_persona_2 from "@/Images/saveo/saveo_persona_2.png";
+import saveo_persona_3 from "@/Images/saveo/saveo_persona_3.png";
+import primary_problem_statements from "@/Images/saveo/primary_problem_statements.png";
+import real_help_to_neha from "@/Images/saveo/real_help_to_neha.png";
+import typography from "@/Images/saveo/typography.png";
+import colour_palette from "@/Images/saveo/colour_palette.png";
+import moodboard from "@/Images/saveo/moodboard.png";
+import saveo_w_h from "@/Images/saveo/saveo_w_h.png";
+import difficulty_vs_impact from "@/Images/saveo/difficulty_vs_impact.jpg";
+import how_does_this_work from "@/Images/saveo/how_does_this_work.png";
+import information_architecture from "@/Images/saveo/information_architecture.png";
+import adding_a_rule_to_a_goal_flow from "@/Images/saveo/userflows/adding_a_rule_to_a_goal_flow.png";
+import creating_a_goal_flow from "@/Images/saveo/userflows/creating_a_goal_flow.png";
+import editing_a_saving_rule_flow from "@/Images/saveo/userflows/editing_a_saving_rule_flow.png";
+import wireframe1 from "@/Images/saveo/wireframes/1.png";
+import wireframe2 from "@/Images/saveo/wireframes/2.png";
+import wireframe3 from "@/Images/saveo/wireframes/3.png";
+import wireframe4 from "@/Images/saveo/wireframes/4.png";
+import onboarding_flow from "@/Images/saveo/userflows/onboarding_flow.png";
+import final_feedback from "@/Images/saveo/final_feedback.png";
+import explorations from "@/Images/saveo/explorations.png";
+import UIdesign from "@/Images/saveo/UIdesign.png";
+import user_testing from "@/Images/saveo/user_testing.png";
+import possible_improvements from "@/Images/saveo/possible_improvements.png";
+---
+
+<Layout title="Saveo">
+  <main class="bg-slate-100 flex justify-center items-center satoshi">
+    <div class="md:w-3/4 flex flex-col mb-24">
+      <Image src={saveo_1} alt="saveo thumbnail" />
+      <div
+        class="w-full bg-[#C5F277] rounded-xl p-10 flex flex-col justify-center my-8"
+      >
+        <p class="text-base opacity-50">
+          Collaborators: <a
+            href="https://anumehapatoria.com/"
+            class="hover:underline">Anumeha</a
+          >, <a
+            href="https://www.behance.net/evanapallivathukkal"
+            class="hover:underline">Evana</a
+          >
+        </p>
+        <p class="text-base opacity-50">Tools: Figma, Miro, Pencil & Paper</p>
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">5 Ws and H</h1>
+        <Image src={saveo_w_h} alt="5 Ws and H" class="" />
+      </div>
+      <div class="w-full bg-white rounded-xl flex flex-col justify-center my-8">
+        <Image src={saveo_2} alt="saveo secondary research" />
+        <a
+          href="https://www.sciencedirect.com/science/article/abs/pii/S1057081099800067"
+          class="mx-20 mb-20 hover:underline text-sm"
+          >[1] An analysis of personal financial literacy among college students
+          - ScienceDirect</a
+        >
+      </div>
+      <div class="relative">
+        <Image src={saveo_3} alt="saveo resume" />
+        <a
+          href="https://miro.com/app/board/uXjVMu5E48M=/?moveToWidget=3458764561445060783&cot=14"
+        >
+          <Image
+            src={saveo_userinterviewdata}
+            alt="saveo userinterview data"
+            class="absolute bottom-20 left-16 h-[38%] w-[35%] object-left shadow-lg hover:shadow-none duration-150"
+          />
+        </a>
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Insights</h1>
+        <Image src={saveo_insight_1} alt="Insights 1" />
+        <Image src={saveo_insight_2} alt="Insights 2" />
+        <h1 class="font-bold text-4xl">What surprised us!</h1>
+        <Image src={saveo_insight_3} alt="Insights 3" />
+      </div>
+      <Image src={saveo_persona_1} alt="persona 1" />
+      <Image src={saveo_persona_2} alt="persona 2" />
+      <Image src={saveo_persona_3} alt="persona 3" />
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Refined Problem Statements</h1>
+        <Image
+          src={primary_problem_statements}
+          alt="primary_problem_statements"
+        />
+      </div>
+      <div
+        class="w-full bg-[#C5F277] rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Primary Problem Statement</h1>
+        <div class="text-3xl">
+          How might we help Neha in saving efficiently for her set goals even
+          though she only receives a small allowance and regrets spending
+          impulsively.
+        </div>
+        <h2 class="font-bold text-2xl pt-8">
+          What are we “really” helping Neha with!
+        </h2>
+        <Image src={real_help_to_neha} alt="real_help_to_neha" />
+      </div>
+      <h1 class="font-bold text-4xl mt-10 mb-4">
+        Post Ideation - Difficulty vs Impact Graph
+      </h1>
+      <Image src={difficulty_vs_impact} alt="difficulty_vs_impact" />
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">So how does this all work?</h1>
+        <Image src={how_does_this_work} alt="how_does_this_work" />
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Information Architecture</h1>
+        <Image src={information_architecture} alt="information_architecture" />
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Userflows</h1>
+        <h2 class="font-bold text-2xl pt-8">Onboarding flow</h2>
+        <Image src={onboarding_flow} alt="onboarding_flow" />
+        <h2 class="font-bold text-2xl pt-8">Creating a goal</h2>
+        <Image src={creating_a_goal_flow} alt="creating_a_goal_flow" />
+        <h2 class="font-bold text-2xl pt-8">Adding a new rule to a goal</h2>
+        <Image
+          src={adding_a_rule_to_a_goal_flow}
+          alt="adding_a_rule_to_a_goal_flow"
+        />
+        <h2 class="font-bold text-2xl pt-8">Editing a saving rule</h2>
+        <Image
+          src={editing_a_saving_rule_flow}
+          alt="editing_a_saving_rule_flow"
+        />
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Wireframes</h1>
+        <Image src={wireframe1} alt="wireframe1" />
+        <Image src={wireframe2} alt="wireframe2" />
+        <Image src={wireframe3} alt="wireframe3" />
+        <Image src={wireframe4} alt="wireframe4" />
+      </div>
+
+      <Image src={moodboard} alt="moodboard" />
+      <Image src={colour_palette} alt="colour_palette" />
+      <Image src={typography} alt="typography" />
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">UI Explorations</h1>
+        <Image src={explorations} alt="explorations" />
+      </div>
+
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">UI Design</h1>
+        <Image src={UIdesign} alt="UIdesign" />
+      </div>
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Final Prototype</h1>
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 24px;"
+          width="100%"
+          height="720"
+          class="my-8"
+          src="https://embed.figma.com/proto/SNITckVcx1e8nVTbgpa5VR/Saveo---Design-file?page-id=13%3A4&node-id=1051-6237&node-type=canvas&viewport=20%2C564%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1051%3A6237&show-proto-sidebar=1&embed-host=share"
+          allowfullscreen></iframe>
+      </div>
+      <Image src={user_testing} alt="user testing" />
+      <div
+        class="w-full bg-white rounded-xl p-20 flex flex-col justify-center space-y-12 my-8"
+      >
+        <h1 class="font-bold text-4xl">Feedback</h1>
+        <Image src={final_feedback} alt="final feedback" />
+        <hr />
+        <h1 class="font-bold text-4xl">What can be improved?</h1>
+        <Image src={possible_improvements} alt="possible_improvements" />
+      </div>
+      <div
+        class="w-full bg-[#C5F277] rounded-xl p-20 flex flex-col items-center justify-center my-8 text-5xl font-bold"
+      >
+        Thank you
+      </div>
+    </div>
+  </main>
+</Layout>

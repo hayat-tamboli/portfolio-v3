@@ -1,5 +1,5 @@
 ---
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 import Navbar from "../components/Navbar.astro";
 import "@/styles/globals.css";
 interface Props {
@@ -12,6 +12,10 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701,900,901&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -47,5 +51,6 @@ const { title } = Astro.props;
       </ul>
     </footer>
   </body>
+
 
 </html>
