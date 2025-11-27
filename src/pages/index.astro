@@ -9,18 +9,19 @@ import errorThumbnail from "@/Images/errorThumbnail.png";
 import saveoThumbnail from "@/Images/saveo/saveoThumbnail.png";
 import krantiThumbnail from "@/Images/krantiThumbnail.png";
 import { Button } from "@/components/ui/button";
+import CaseStudyUnderConstructionTag from "@/components/CaseStudyUnderConstructionTag.astro";
 ---
 
 <Layout title="Hayat Tamboli">
   <main class="bg-slate-100 flex justify-center items-center">
     <div
-      class="md:w-2/4 px-4 rounded-2xl border-dashed flex flex-col space-y-4 justify-center my-40"
+      class="md:w-3/4 px-4 rounded-2xl border-dashed flex flex-col space-y-4 justify-center my-40"
     >
       <div
         class="bg-white p-8 rounded-3xl my-10 border border-slate-200/30 shadow-md shadow-slate-400/10"
       >
         <h1 class="text-4xl font-bold text-black/80">
-          Hi, I'm <span class="text-slate-900">Hayat!</span>
+          Hi, I'm <span class="text-slate-900">Hayat Tamboli!</span>
         </h1>
         <h1 class="text-xl font-medium text-black/80 mt-4">
           I find joy in <span
@@ -37,312 +38,334 @@ import { Button } from "@/components/ui/button";
       <h1 class="text-3xl font-bold text-black/80 pt-6 pb-3">
         Selected Projects
       </h1>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <a href="/projects/saveo">
-          <div>
-            <div class="cursor-pointer relative">
-              <Image
-                src={saveoThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="saveoThumbnail"
-              />
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-              <p class="font-bold text-slate-900/90">Saveo:</p>
-              <p class="text-base capitalize">
-                Helping students save to achieve their goals
-              </p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://anumehapatoria.com/"
-                  class="hover:underline">Anumeha</a
-                >, <a
-                  href="https://www.behance.net/evanapallivathukkal"
-                  class="hover:underline">Evana</a
-                >
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('starmazeVideo').classList.remove('hidden');document.getElementById('starmazeThumbnail').classList.add('hidden');document.getElementById('starmazeAward').classList.add('hidden')"}
-              class="cursor-pointer relative"
-            >
-              <Image
-                src={starmazeThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="starmazeThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="starmazeVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/qIpxdI3iyhA?si=DGuM6hiu5F61C9ul&rel=0"
-                title="Dive: A generative art authoring tool in VR"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
+      <div class="grid grid-cols-2 gap-4">
+        <div
+          class="bg-white rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
+        >
+          <a href="/projects/saveo">
+            <div>
+              <div class="cursor-pointer relative">
+                <Image
+                  src={saveoThumbnail}
+                  alt={""}
+                  class="aspect-video object-cover object-top"
+                  id="saveoThumbnail"
+                />
+              </div>
               <div
-                class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
-                id="starmazeAward"
+                class="py-4 px-8 bottom-0 left-0 w-full font-semibold text-xl"
               >
-                🏆 Best Artwork Installation Award - IndiaHCI 2024
+                <p class="font-bold text-slate-900/90">Saveo:</p>
+                <p class="text-base capitalize">
+                  Helping students save to achieve their goals
+                </p>
+                <p class="text-sm opacity-50">
+                  Collaborators: <a
+                    href="https://anumehapatoria.com/"
+                    class="hover:underline">Anumeha</a
+                  >, <a
+                    href="https://www.behance.net/evanapallivathukkal"
+                    class="hover:underline">Evana</a
+                  >
+                </p>
+                <div class="flex gap-3">
+                  <a href="/projects/saveo"
+                    ><Button
+                      className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
+                      >Read the Case Study <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ai ai-ArrowUpRight"
+                        style="margin-left: 8px;"
+                        ><path d="M18 6L6 18"></path><path d="M8 6h10v10"
+                        ></path></svg
+                      ></Button
+                    ></a
+                  >
+                </div>
               </div>
             </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-              <div class="bg-slate-400/10 flex text-base gap-2 w-fit px-4 py-2 rounded-md mb-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="#000000"
-                  viewBox="0 0 256 256"
-                  ><path
-                    d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"
-                  ></path></svg
-                ><p>Case study under construction</p>
-              </div>
-              <p class="font-bold text-slate-900/90">STARMAZE:</p>
-              <p class="text-base capitalize">A Cross-platform VR Game</p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://anumehapatoria.com/"
-                  class="hover:underline">Anumeha</a
-                >, <a
-                  href="https://tanmaykuwalekar.com/"
-                  class="hover:underline">Tanmay</a
-                >, <a href="https://yashwantrawat.com" class="hover:underline"
-                  >Yashwant</a
-                >
-              </p>
-            </div>
-          </div>
+          </a>
         </div>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('errorVideo').classList.remove('hidden');document.getElementById('errorThumbnail').classList.add('hidden');document.getElementById('errorAward').classList.add('hidden')"}
-              class="cursor-pointer relative"
-            >
-              <Image
-                src={errorThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="errorThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="errorVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/EQORKwCv02Q?si=cyd-rYwPuNIyvvNZ&rel=0"
-                title="error 409: The Portable Phygital Game Based on Binary to Decimal Number Conversion"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-              <div
-                class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
-                id="errorAward"
-              >
-                🏆 Most Polished Gameplay Award - CHI PLAY 2024
-              </div>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-              <p class="font-bold text-slate-900/90">Error 409:</p>
-              <p class="text-base capitalize">
-                The Portable Phygital Game Based on Binary to Decimal Number
-                Conversion
-              </p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a href="" class="hover:underline">Deekshaa</a>,
-                <a href="" class="hover:underline">Vijayanand</a>,
-                <a
-                  href="https://www.behance.net/yashkaranjavkar"
-                  class="hover:underline">Yash</a
-                >
-              </p>
-              <div class="flex gap-3">
-                <a
-                  href="https://www.behance.net/gallery/213675117/Error-409-A-phygital-game-of-binary-numbers"
-                  ><Button
-                    className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
-                    >Read the Case Study 🡥</Button
-                  ></a
-                >
-                <a href="https://dl.acm.org/doi/10.1145/3665463.3678826"
-                  ><Button
-                    className="mt-2 shadow-lg shadow-[#b7b7b744]"
-                    variant={"outline"}>Read the paper 🡥</Button
-                  ></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <a
-          href="https://www.behance.net/gallery/213624613/Krant-e-Optimizing-EV-Fleet-Operation"
+        <div
+          class="bg-white rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
         >
           <div>
-            <div class="cursor-pointer relative">
-              <Image
-                src={krantiThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="krantiThumbnail"
-              />
+            <div>
               <div
-                class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
-                id="starmazeAward"
+                onclick={"document.getElementById('starmazeVideo').classList.remove('hidden');document.getElementById('starmazeThumbnail').classList.add('hidden');document.getElementById('starmazeAward').classList.add('hidden')"}
+                class="cursor-pointer relative"
               >
-                🏆 Winning project of Design GC - IIT B 2023
+                <Image
+                  src={starmazeThumbnail}
+                  alt={""}
+                  class="aspect-video object-cover object-top"
+                  id="starmazeThumbnail"
+                />
+                <iframe
+                  class="aspect-video hidden"
+                  id="starmazeVideo"
+                  width="100%"
+                  src="https://www.youtube.com/embed/qIpxdI3iyhA?si=DGuM6hiu5F61C9ul&rel=0"
+                  title="Dive: A generative art authoring tool in VR"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+                <div
+                  class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
+                  id="starmazeAward"
+                >
+                  🏆 Best Artwork Installation Award - IndiaHCI 2024
+                </div>
               </div>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-              <p class="font-bold text-slate-900/90">Kranti:</p>
-              <p class="text-base capitalize">
-                Optimizing the EV fleet for students at IIT B
-              </p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://yashwantrawat.com"
-                  class="hover:underline">Yashwant</a
-                >, <a href="" class="hover:underline">Sidharth</a>, <a
-                  href=""
-                  class="hover:underline">Saikat</a
-                >
-                , <a href="https://tanmaykuwalekar.com/" class="hover:underline"
-                  >Tanmay</a
-                >
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <a href="https://data-vis-ten.vercel.app/"
-          ><div>
-            <Image
-              src={bollyBlues}
-              alt=""
-              class="aspect-video object-cover object-top"
-            />
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl border-t"
-            >
-            <div class="bg-slate-400/10 flex text-base gap-2 w-fit px-4 py-2 rounded-md mb-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="#000000"
-                viewBox="0 0 256 256"
-                ><path
-                  d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"
-                ></path></svg
-              ><p>Case study under construction</p>
-            </div>
-              <p class="font-bold text-slate-900/90">
-                Redesign of Bolly Blues:
-              </p>
-              <p class="text-base">Bollywood Data Visualization</p>
-            </div>
-          </div></a
-        >
-      </div>
-
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('diveVideo').classList.remove('hidden');document.getElementById('diveThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
-            >
-              <Image
-                src={diveThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="diveThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="diveVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/WA6rIXslxFE?si=17e_ezm08r0FaNaJ&rel=0"
-                title="Dive: A generative art authoring tool in VR"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-            <div class="bg-slate-400/10 flex text-base gap-2 w-fit px-4 py-2 rounded-md mb-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="#000000"
-                viewBox="0 0 256 256"
-                ><path
-                  d="M226.76,69a8,8,0,0,0-12.84-2.88l-40.3,37.19-17.23-3.7-3.7-17.23,37.19-40.3A8,8,0,0,0,187,29.24,72,72,0,0,0,88,96,72.34,72.34,0,0,0,94,124.94L33.79,177c-.15.12-.29.26-.43.39a32,32,0,0,0,45.26,45.26c.13-.13.27-.28.39-.42L131.06,162A72,72,0,0,0,232,96,71.56,71.56,0,0,0,226.76,69ZM160,152a56.14,56.14,0,0,1-27.07-7,8,8,0,0,0-9.92,1.77L67.11,211.51a16,16,0,0,1-22.62-22.62L109.18,133a8,8,0,0,0,1.77-9.93,56,56,0,0,1,58.36-82.31l-31.2,33.81a8,8,0,0,0-1.94,7.1L141.83,108a8,8,0,0,0,6.14,6.14l26.35,5.66a8,8,0,0,0,7.1-1.94l33.81-31.2A56.06,56.06,0,0,1,160,152Z"
-                ></path></svg
-              ><p>Case study under construction</p>
-            </div>
-              <p class="font-bold text-slate-900/90">Dive:</p>
-              <p class="text-base capitalize">
-                A generative art authoring tool in VR
-              </p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://anumehapatoria.com/"
-                  class="hover:underline">Anumeha</a
-                >, <a
-                  href="https://tanmaykuwalekar.com/"
-                  class="hover:underline">Tanmay</a
-                >, <a href="https://yashwantrawat.com" class="hover:underline"
-                  >Yashwant</a
-                >
-              </p>
+              <div
+                class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+              >
+                <CaseStudyUnderConstructionTag />
+                <p class="font-bold text-slate-900/90">STARMAZE:</p>
+                <p class="text-base capitalize">A Cross-platform VR Game</p>
+                <p class="text-sm opacity-50">
+                  Collaborators: <a
+                    href="https://anumehapatoria.com/"
+                    class="hover:underline">Anumeha</a
+                  >, <a
+                    href="https://tanmaykuwalekar.com/"
+                    class="hover:underline">Tanmay</a
+                  >, <a href="https://yashwantrawat.com" class="hover:underline"
+                    >Yashwant</a
+                  >
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <div
+          class="bg-white rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
+        >
+          <div>
+            <div>
+              <div
+                onclick={"document.getElementById('errorVideo').classList.remove('hidden');document.getElementById('errorThumbnail').classList.add('hidden');document.getElementById('errorAward').classList.add('hidden')"}
+                class="cursor-pointer relative"
+              >
+                <Image
+                  src={errorThumbnail}
+                  alt={""}
+                  class="aspect-video object-cover object-top"
+                  id="errorThumbnail"
+                />
+                <iframe
+                  class="aspect-video hidden"
+                  id="errorVideo"
+                  width="100%"
+                  src="https://www.youtube.com/embed/EQORKwCv02Q?si=cyd-rYwPuNIyvvNZ&rel=0"
+                  title="error 409: The Portable Phygital Game Based on Binary to Decimal Number Conversion"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+                <div
+                  class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
+                  id="errorAward"
+                >
+                  🏆 Most Polished Gameplay Award - CHI PLAY 2024
+                </div>
+              </div>
+              <div
+                class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+              >
+                <p class="font-bold text-slate-900/90">Error 409:</p>
+                <p class="text-base capitalize">
+                  The Portable Phygital Game Based on Binary to Decimal Number
+                  Conversion
+                </p>
+                <p class="text-sm opacity-50">
+                  Collaborators: <a href="" class="hover:underline">Deekshaa</a
+                  >,
+                  <a href="" class="hover:underline">Vijayanand</a>,
+                  <a
+                    href="https://www.behance.net/yashkaranjavkar"
+                    class="hover:underline">Yash</a
+                  >
+                </p>
+                <div class="flex gap-3">
+                  <a
+                    href="https://www.behance.net/gallery/213675117/Error-409-A-phygital-game-of-binary-numbers"
+                    ><Button
+                      className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
+                      >Read the Case Study <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ai ai-ArrowUpRight"
+                        style="margin-left: 8px;"
+                        ><path d="M18 6L6 18"></path><path d="M8 6h10v10"
+                        ></path></svg
+                      ></Button
+                    ></a
+                  >
+                  <a href="https://dl.acm.org/doi/10.1145/3665463.3678826"
+                    ><Button
+                      className="mt-2 shadow-lg shadow-[#b7b7b744]"
+                      variant={"outline"}
+                      >Read the paper <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="ai ai-ArrowUpRight"
+                        style="margin-left: 8px;"
+                        ><path d="M18 6L6 18"></path><path d="M8 6h10v10"
+                        ></path></svg
+                      ></Button
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
+        >
+          <a
+            href="https://www.behance.net/gallery/213624613/Krant-e-Optimizing-EV-Fleet-Operation"
+          >
+            <div>
+              <div class="cursor-pointer relative">
+                <Image
+                  src={krantiThumbnail}
+                  alt={""}
+                  class="aspect-video object-cover object-top"
+                  id="krantiThumbnail"
+                />
+                <div
+                  class="text-sm font-bold p-2 bg-black/50 backdrop-blur-sm text-white mb-2 w-fit rounded-md absolute bottom-2 mx-8"
+                  id="starmazeAward"
+                >
+                  🏆 Winning project of Design GC - IIT B 2023
+                </div>
+              </div>
+              <div
+                class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+              >
+                <p class="font-bold text-slate-900/90">Kranti:</p>
+                <p class="text-base capitalize">
+                  Optimizing the EV fleet for students at IIT B
+                </p>
+                <p class="text-sm opacity-50">
+                  Collaborators: <a
+                    href="https://yashwantrawat.com"
+                    class="hover:underline">Yashwant</a
+                  >, <a href="" class="hover:underline">Sidharth</a>, <a
+                    href=""
+                    class="hover:underline">Saikat</a
+                  >
+                  , <a
+                    href="https://tanmaykuwalekar.com/"
+                    class="hover:underline">Tanmay</a
+                  >
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
+        >
+          <a href="https://data-vis-ten.vercel.app/"
+            ><div>
+              <Image
+                src={bollyBlues}
+                alt=""
+                class="aspect-video object-cover object-top"
+              />
+              <div
+                class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl border-t"
+              >
+                <CaseStudyUnderConstructionTag />
+                <p class="font-bold text-slate-900/90">
+                  Redesign of Bolly Blues:
+                </p>
+                <p class="text-base">Bollywood Data Visualization</p>
+              </div>
+            </div></a
+          >
+        </div>
 
-      <div
-        class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
-      >
-        <h1 class="text-2xl font-bold text-slate-400 my-24">
-          More projects will be added soon
-        </h1>
+        <div
+          class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
+        >
+          <div>
+            <div>
+              <div
+                onclick={"document.getElementById('diveVideo').classList.remove('hidden');document.getElementById('diveThumbnail').classList.add('hidden')"}
+                class="cursor-pointer"
+              >
+                <Image
+                  src={diveThumbnail}
+                  alt={""}
+                  class="aspect-video object-cover object-top"
+                  id="diveThumbnail"
+                />
+                <iframe
+                  class="aspect-video hidden"
+                  id="diveVideo"
+                  width="100%"
+                  src="https://www.youtube.com/embed/WA6rIXslxFE?si=17e_ezm08r0FaNaJ&rel=0"
+                  title="Dive: A generative art authoring tool in VR"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen></iframe>
+              </div>
+              <div
+                class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+              >
+                <CaseStudyUnderConstructionTag />
+                <p class="font-bold text-slate-900/90">Dive:</p>
+                <p class="text-base capitalize">
+                  A generative art authoring tool in VR
+                </p>
+                <p class="text-sm opacity-50">
+                  Collaborators: <a
+                    href="https://anumehapatoria.com/"
+                    class="hover:underline">Anumeha</a
+                  >, <a
+                    href="https://tanmaykuwalekar.com/"
+                    class="hover:underline">Tanmay</a
+                  >, <a href="https://yashwantrawat.com" class="hover:underline"
+                    >Yashwant</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+        >
+          <h1 class="text-2xl font-bold text-slate-400 my-24">
+            More projects will be added soon
+          </h1>
+        </div>
       </div>
     </div>
   </main>
