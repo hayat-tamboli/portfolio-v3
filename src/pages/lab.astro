@@ -5,165 +5,187 @@ import fabricOfTime from "@/Images/fabricOfTime.png";
 import aironicalsThumbnail from "@/Images/aironicalsThumbnail.png";
 import bitreeThumbnail from "@/Images/bitreeThumbnail.png";
 import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/ProjectCard.astro";
+import ArrowUpRight from "phosphor-astro/ArrowUpRightBold.astro";
 ---
 
+<style>
+  .us-project-container {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .welcome a {
+    display: none;
+  }
+</style>
+
 <Layout title="Hayat Tamboli - experiments">
+  <!-- <div class="overflow-hidden h-[840px]">
+    <div
+      data-us-project="H5u97lSZeauKyoUH4pFu"
+      style="width:100%; height: 900px"
+      class="welcome"
+    >
+    </div><script type="text/javascript">
+      !(function () {
+        if (!window.UnicornStudio) {
+          window.UnicornStudio = { isInitialized: !1 };
+          var i = document.createElement("script");
+          ((i.src =
+            "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.36/dist/unicornStudio.umd.js"),
+            (i.onload = function () {
+              window.UnicornStudio.isInitialized ||
+                (UnicornStudio.init(),
+                (window.UnicornStudio.isInitialized = !0));
+            }),
+            (document.head || document.body).appendChild(i));
+        }
+      })();
+    </script>
+  </div> -->
   <main class="bg-slate-100 min-h-screen flex justify-center items-center">
     <div
-      class="md:w-2/4 px-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center my-40"
+      class="md:w-3/4 px-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center my-40"
     >
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('aironicalsVideo').classList.remove('hidden');document.getElementById('aironicalsThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
-            >
-              <Image
-                src={aironicalsThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="aironicalsThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="aironicalsVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/amwDWt0vpjs?si=oh4VPzOr14NFa1hc&rel=0"
-                title="Fabric of Time - Video control using fabric"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
-            >
-              <p class="font-bold text-slate-900/90">Aironicals:</p>
-              <p class="text-base capitalize">AI Podcast of Hayat and Yash</p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://www.behance.net/yashkaranjavkar"
-                  class="hover:underline">Yash</a
-                >
-              </p>
-              <a
-                href="https://hayat-tamboli.notion.site/AIronicals-150373eba97780cabb96f53f250ea440?pvs=4"
-                ><Button
-                  className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
-                  >Read the Case Study 🡥</Button
-                ></a
-              >
-              <a href="https://aironicals.vercel.app/"
-                ><Button
-                  className="mt-2 shadow-lg shadow-[#b7b7b744]"
-                  variant={"outline"}>View Project 🡥</Button
-                ></a
-              >
-            </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <ProjectCard
+          title="Aironicals"
+          description="AI Podcast of Hayat and Yash"
+        >
+          <div
+            slot="media"
+            onclick={"document.getElementById('aironicalsVideo').classList.remove('hidden');document.getElementById('aironicalsThumbnail').classList.add('hidden')"}
+            class="cursor-pointer relative"
+          >
+            <Image
+              src={aironicalsThumbnail}
+              alt=""
+              class="aspect-video object-cover object-top"
+              id="aironicalsThumbnail"
+            />
+            <iframe
+              class="aspect-video hidden"
+              id="aironicalsVideo"
+              width="100%"
+              src="https://www.youtube.com/embed/amwDWt0vpjs?si=oh4VPzOr14NFa1hc&rel=0"
+              title="Fabric of Time - Video control using fabric"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('fabricOfTimeVideo').classList.remove('hidden');document.getElementById('fabricOfTimeThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
+          <span slot="collaborators">
+            Collaborators: <a
+              href="https://www.behance.net/yashkaranjavkar"
+              class="hover:underline">Yash</a
             >
-              <Image
-                src={fabricOfTime}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="fabricOfTimeThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="fabricOfTimeVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/pd5-uiqKcpc?si=hiUO7t6dFJl397Pj&rel=0"
-                title="Fabric of Time - Video control using fabric"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+          </span>
+          <a
+            slot="actions"
+            href="https://hayat-tamboli.notion.site/AIronicals-150373eba97780cabb96f53f250ea440?pvs=4"
+          >
+            <Button
+              className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
             >
-              <p class="font-bold text-slate-900/90">Fabric of Time:</p>
-              <p class="text-base capitalize">Video control using fabric</p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://nityavyas.com/"
-                  class="hover:underline">Nitya</a
-                >, <a
-                  href="https://www.behance.net/sidharthgoutham"
-                  class="hover:underline">Sidharth</a
-                >, <a
-                  href="https://www.behance.net/yashkaranjavkar"
-                  class="hover:underline">Yash</a
-                >
-              </p>
-              <a
-                href="https://www.behance.net/gallery/213390043/The-Fabric-of-Time-A-Tangible-User-Interface"
-                ><Button
-                  className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
-                  >Read the Case Study 🡥</Button
-                ></a
-              >
-            </div>
+              Read the Case Study <ArrowUpRight width={16} height={16} class="ml-2" />
+            </Button>
+          </a>
+          <a slot="actions" href="https://aironicals.vercel.app/">
+            <Button
+              className="mt-2 shadow-lg shadow-[#b7b7b744]"
+              variant="outline"
+            >
+              View Project <ArrowUpRight width={16} height={16} class="ml-2" />
+            </Button>
+          </a>
+        </ProjectCard>
+        <ProjectCard
+          title="Fabric of Time"
+          description="Video control using fabric"
+        >
+          <div
+            slot="media"
+            onclick={"document.getElementById('fabricOfTimeVideo').classList.remove('hidden');document.getElementById('fabricOfTimeThumbnail').classList.add('hidden')"}
+            class="cursor-pointer relative"
+          >
+            <Image
+              src={fabricOfTime}
+              alt=""
+              class="aspect-video object-cover object-top"
+              id="fabricOfTimeThumbnail"
+            />
+            <iframe
+              class="aspect-video hidden"
+              id="fabricOfTimeVideo"
+              width="100%"
+              src="https://www.youtube.com/embed/pd5-uiqKcpc?si=hiUO7t6dFJl397Pj&rel=0"
+              title="Fabric of Time - Video control using fabric"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
-      <div
-        class="bg-slate-400/10 rounded-3xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.98] transition-all duration-250"
-      >
-        <div>
-          <div>
-            <div
-              onclick={"document.getElementById('bitreeVideo').classList.remove('hidden');document.getElementById('bitreeThumbnail').classList.add('hidden')"}
-              class="cursor-pointer"
+          <span slot="collaborators">
+            Collaborators: <a
+              href="https://nityavyas.com/"
+              class="hover:underline">Nitya</a
+            >, <a
+              href="https://www.behance.net/sidharthgoutham"
+              class="hover:underline">Sidharth</a
+            >, <a
+              href="https://www.behance.net/yashkaranjavkar"
+              class="hover:underline">Yash</a
             >
-              <Image
-                src={bitreeThumbnail}
-                alt={""}
-                class="aspect-video object-cover object-top"
-                id="bitreeThumbnail"
-              />
-              <iframe
-                class="aspect-video hidden"
-                id="bitreeVideo"
-                width="100%"
-                src="https://www.youtube.com/embed/rQBjto47UQc?si=1yqHXtXARX8V7XBi&rel=0"
-                title="bitree - experimental animation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-            </div>
-            <div
-              class="py-4 px-8 bottom-0 left-0 bg-white w-full font-semibold text-xl"
+          </span>
+          <a
+            slot="actions"
+            href="https://www.behance.net/gallery/213390043/The-Fabric-of-Time-A-Tangible-User-Interface"
+          >
+            <Button
+              className="mt-2 bg-[#03A06D] shadow-[#03A06D44] shadow-lg hover:bg-[#03A06Ddd]"
             >
-              <p class="font-bold text-slate-900/90">BITREE:</p>
-              <p class="text-base capitalize">Experimental animation</p>
-              <p class="text-sm opacity-50">
-                Collaborators: <a
-                  href="https://www.behance.net/yashkaranjavkar"
-                  class="hover:underline">Yash</a
-                >
-              </p>
-            </div>
+              Read the Case Study <ArrowUpRight width={16} height={16} class="ml-2" />
+            </Button>
+          </a>
+        </ProjectCard>
+        <ProjectCard
+          title="BITREE"
+          description="Experimental animation"
+        >
+          <div
+            slot="media"
+            onclick={"document.getElementById('bitreeVideo').classList.remove('hidden');document.getElementById('bitreeThumbnail').classList.add('hidden')"}
+            class="cursor-pointer relative"
+          >
+            <Image
+              src={bitreeThumbnail}
+              alt=""
+              class="aspect-video object-cover object-top"
+              id="bitreeThumbnail"
+            />
+            <iframe
+              class="aspect-video hidden"
+              id="bitreeVideo"
+              width="100%"
+              src="https://www.youtube.com/embed/rQBjto47UQc?si=1yqHXtXARX8V7XBi&rel=0"
+              title="bitree - experimental animation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
           </div>
+          <span slot="collaborators">
+            Collaborators: <a
+              href="https://www.behance.net/yashkaranjavkar"
+              class="hover:underline">Yash</a
+            >
+          </span>
+        </ProjectCard>
+        <div
+          class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
+        >
+          <h1 class="text-2xl font-semibold text-slate-400 my-24 p-10 text-center">
+            More experiments and explorations will be added soon
+          </h1>
         </div>
-      </div>
-      <div
-        class="w-full border-slate-200 border-4 rounded-3xl border-dashed flex flex-col space-y-4 justify-center items-center"
-      >
-        <h1 class="text-2xl font-bold text-slate-400 my-24 p-10">
-          More experiments and explorations will be added soon
-        </h1>
       </div>
     </div>
   </main>
