@@ -1,0 +1,39 @@
+---
+interface Props {
+  /** Project title (e.g. "Saveo:") */
+  title: string;
+  /** Short project description */
+  description: string;
+  /** When set, the whole card is wrapped in a link */
+  href?: string;
+  /** Optional extra classes for the card wrapper */
+  class?: string;
+}
+
+const { title, description, href, class: cardClass } = Astro.props;
+const baseClasses =
+  "rounded-xl border-2 overflow-clip border-slate-200/30 shadow-md shadow-slate-400/10 hover:shadow-none hover:scale-[0.985] transition-all duration-250";
+
+const Wrapper = href ? "a" : "div";
+---
+
+<div class:list={[cardClass ?? "bg-white", baseClasses]}>
+  <Wrapper {...(href ? { href } : {})}>
+    <div>
+      <div class="cursor-pointer relative">
+        <slot name="media" />
+      </div>
+      <div class="py-4 px-8 bottom-0 left-0 w-full font-semibold text-xl">
+        <slot name="badge" />
+        <p class="font-semibold text-slate-900/90">{title}</p>
+        <p class="text-base capitalize">{description}</p>
+        <p class="text-sm opacity-50">
+          <slot name="collaborators" />
+        </p>
+        <div class="flex gap-3">
+          <slot name="actions" />
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</div>

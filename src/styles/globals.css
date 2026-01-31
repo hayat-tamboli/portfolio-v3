@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Gochi+Hand&display=swap");
+@import url("./fonts/WEB/css/clash-grotesk.css");
 
 @font-face {
   font-family: "HealTheWebA";
   src: url("./fonts/HealTheWebA-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "OffBit";
+  src: url("./fonts/OffBitTrial-Regular.otf") format("opentype");
 }
 @tailwind base;
 @tailwind components;
@@ -93,15 +98,43 @@
   }
   .healtheweba {
     font-family: "HealTheWebA", sans-serif;
+    -webkit-font-feature-settings: "ss06";
+    font-feature-settings: "ss06";
+  }
+  .healthewebaSimple {
+    font-family: "HealTheWebA", sans-serif;
+    -webkit-font-feature-settings: "ss01";
+    font-feature-settings: "ss01";
   }
   .figtree {
     font-family: "Figtree", sans-serif;
   }
+  .offbit {
+    font-family: "OffBit", sans-serif;
+  }
+  .clash-grotesk {
+    font-family: "ClashGrotesk-Variable", sans-serif;
+  }
 }
 
 html {
-  font-family: "HealTheWebA", sans-serif;
+  /* font-family: "HealTheWebA", sans-serif;
   -webkit-font-feature-settings: "ss01";
     font-feature-settings: "ss01";
+  font-optical-sizing: auto; */
+  font-family: "ClashGrotesk-Variable", sans-serif;
   font-optical-sizing: auto;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 8s linear infinite;
 }
